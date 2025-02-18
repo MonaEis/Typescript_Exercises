@@ -6,13 +6,13 @@
 
 html {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: aquamarine;
+
 }
 
 div{
   width: 100%;
-  height: 100vh;
-  padding: 5%;
-  background-color: aquamarine;
+  padding: 5% 5% 0 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,18 +43,17 @@ li {
   margin: 0;
 }
 
-li::before {
+li.dino::before {
   content: "🦖 ";
 }
 
-li::after {
+li.dino::after {
   content: " 🦖";
 }
 
 li:hover {
   color: coral;
   font-size: 35px;
-
 }
 
 a{
@@ -63,5 +62,12 @@ a{
 
 a:hover{
   color: coral;
+}
 
+li.bird::before {
+  content: "🦜 ";
+}
+
+li.bird::after {
+  content: " 🦜";
 }
