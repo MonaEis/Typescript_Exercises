@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="basic.ts"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Project TS Kreditkarte</title>
+</head>
+<body>
+    <main>
+        
+        <div class="card">
+            <div class="bilder">
+                <img src="./assets/img/chip.png" alt="chip">
+                <img src="./assets/img/visa_logo.png" alt="visa logo">
+            </div>
+            <h5 class="nummer-eintragen">#### #### #### ####</h5>
+            <div class="eintragen-text">
+                <div class="links">
+                    <p class="card-holder">Card Holder</p>
+                    <h5 class="full-name">FULL NAME</h5>
+                </div>
+                <div class="rechts">
+                    <p class="expires">Expires</p>
+                    <h5 class="date">MM/YY</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <form>
+                <div>
+                    <label for="input-c-number">Card Number</label>
+                    <input type="number" name="input-c-number" id="input-c-number">
+                    <label for="input-c-holder">Card Holder</label>
+                    <input type="text" name="input-c-holder" id="input-c-holder">
+                </div>
+                
+                <div class="input-unten">
+                    <div>
+                        <label for="input-date">Expiration Date</label>
+                        <input type="date" name="input-date" id="input-date">                    
+                    </div>
+                    <div>
+                        <label for="input-cvv">CVV</label>
+                        <input type="number" name="input-cvv" id="input-cvv">
+                    </div>
+                </div>
+                <input class="button" type="submit" value="Submit">
+            </form>
+        </div>
+    </main>
+
+    
+    
+</body>
+</html>

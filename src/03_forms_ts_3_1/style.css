@@ -1,0 +1,40 @@
+*{
+    transition: .5s ease-in-out;
+}
+
+.alle-baelle{
+    display: flex;
+}
+
+.ball1 {
+    background-color: #7fffd4;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin: 2%;
+}
+
+.ball2 {
+    background-color: rgb(252, 177, 112);
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin: 2%;
+}
+
+.ball3 {
+    background-color: #70c4fc;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin: 2%;
+}
+
+.ball4 {
+    background-color: rgb(252, 112, 231);
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin: 2%;
+    background-size: contain;
+}

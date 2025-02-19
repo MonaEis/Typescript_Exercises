@@ -12,7 +12,7 @@ html {
 
 div{
   width: 100%;
-  padding: 5% 5% 0 5%;
+  padding: 5% 5% 1% 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +28,7 @@ h1 {
 
 h2 {
   font-size: 35px;
-  color: rgb(127, 127, 255);
+  color: rgb(240, 96, 250);
   margin-bottom: 40px;
   border-bottom: dotted 8px;
   text-align: center;
@@ -70,4 +70,20 @@ li.bird::before {
 
 li.bird::after {
   content: " 🦜";
+}
+
+li.bl-beere::before {
+  content: "🫐 ";
+}
+
+li.bl-beere::after {
+  content: " 🫐";
+}
+
+li.cam::before {
+  content: "📸 ";
+}
+
+li.cam::after {
+  content: " 📸";
 }
