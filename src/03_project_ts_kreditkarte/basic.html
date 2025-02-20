@@ -32,7 +32,8 @@
             <form>
                 <div>
                     <label for="input-c-number">Card Number</label>
-                    <input type="number" name="input-c-number" id="input-c-number">
+                    <input type="number" name="input-c-number" id="input-c-number" inputmode="numeric" 
+                    pattern="[0-9\s\d{4}]{13,19}" maxlength="19">
                     <label for="input-c-holder">Card Holder</label>
                     <input type="text" name="input-c-holder" id="input-c-holder">
                 </div>
@@ -40,7 +41,7 @@
                 <div class="input-unten">
                     <div>
                         <label for="input-date">Expiration Date</label>
-                        <input type="date" name="input-date" id="input-date">                    
+                        <input type="month" name="input-date" id="input-date">                    
                     </div>
                     <div>
                         <label for="input-cvv">CVV</label>
@@ -49,6 +50,7 @@
                 </div>
                 <input class="button" type="submit" value="Submit">
             </form>
+            <div class="error-speech"></div>
         </div>
     </main>
 

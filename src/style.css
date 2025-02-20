@@ -10,6 +10,7 @@ html {
 
 }
 
+
 div{
   width: 100%;
   padding: 5% 5% 1% 5%;
@@ -21,7 +22,7 @@ div{
 
 h1 {
   font-size: 60px;
-  color: rgb(127, 127, 255);
+  color: #7f7fff;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -58,6 +59,7 @@ li:hover {
 
 a{
   text-decoration: none;
+  color: rgb(127, 127, 255);
 }
 
 a:hover{
@@ -86,4 +88,12 @@ li.cam::before {
 
 li.cam::after {
   content: " 📸";
+}
+
+li.fox::before {
+  content: "🦊 ";
+}
+
+li.fox::after {
+  content: " 🦊";
 }
