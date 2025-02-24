@@ -107,3 +107,11 @@ li.fox::after {
   content: " 🦊";
 }
 
+li.ghost::before {
+  content: "👻 ";
+}
+
+li.ghost::after {
+  content: " 👻";
+}
+
