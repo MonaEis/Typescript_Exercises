@@ -115,3 +115,18 @@ li.ghost::after {
   content: " 👻";
 }
 
+li.dodo::before {
+  content: "🦤 ";
+}
+
+li.dodo::after {
+  content: " 🦤";
+}
+
+li.pistol::before {
+  content: "🔫 ";
+}
+
+li.pistol::after {
+  content: " 🔫";
+}
