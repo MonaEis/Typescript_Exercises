@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="project.ts"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Project-TS Rock, Paper, Scissors</title>
+</head>
+<body>
+<div class="wrapper">
+     <main>
+        <div class="rounds-box">
+            <h3>How many rounds?</h3>
+                <div class="round-counter">Platzhalter</div>
+                <div class="counter">
+                    
+                        <input type="radio" name="check" value="5" id="check5" checked >
+                        <label for="check5">5</label>
+                        <input type="radio" name="check" value="10" id="check10">
+                        <label for="check5">10</label>
+                   
+                   
+                        <input type="radio" name="check" value="15" id="check15">
+                        <label for="check5">15</label>
+                        <input type="radio" name="check" value="20" id="check20">
+                        <label for="check5">20</label>
+                    
+                     
+                </div>
+                              
+        </div>
+
+        <div class="spielfeld">
+            <div class="player">
+                <div class="player-icon icon">
+                    <p class="chosen-icon-player emoji">?</p>
+                </div>
+                
+                <h5>You</h5>
+            </div>
+
+            <div class="score">
+                <p class="player-score">0</p>
+                <p> : </p>
+                <p class="computer-score">0</p>
+            </div>
+
+            <div class="computer">
+                <div class="computer-icon icon">
+                    <p class="chosen-icon-computer emoji">?</p>
+                </div>
+                
+                <h5>Comp</h5>
+            </div>
+        </div>
+
+        <div class="actions">
+            <h1 class="game-output">Let's play</h1>
+            <div class="play-icons">
+                <!-- <form class="choose">
+                    <input type="submit" class="rock" value="✊">
+                    <input type="submit" class="paper" value="🤚">
+                    <input type="submit" class="scissors" value="✌️">
+                </form> -->
+                <div class="rock-icon icon">
+                    <p class="input-rock emoji">✊</p>
+                </div>
+                <div class="paper-icon icon">
+                    <p class="input-paper emoji">🤚</p>
+                </div>
+                <div class="scissor-icon icon">
+                    <p class="input-scissors emoji">✌️</p>
+                </div>
+            </div>
+            <h4>MAKE YOUR MOVE</h4>
+            <button>restart</button>
+        </div>
+
+    </main>
+    
+</div>
+   
+</body>
+</html>

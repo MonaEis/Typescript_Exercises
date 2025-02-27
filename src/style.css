@@ -130,3 +130,11 @@ li.pistol::before {
 li.pistol::after {
   content: " 🔫";
 }
+
+li.sun::before {
+  content: "🌞 ";
+}
+
+li.sun::after {
+  content: " 🌞";
+}
