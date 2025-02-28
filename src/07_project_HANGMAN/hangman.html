@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="module" src="./hangman.ts"></script>
+        <link rel="stylesheet" href="../style.css" />
+        <title>07 Hangman the Game</title>
+
+        <style>
+            body {
+                background-color: aquamarine;
+            }
+            
+            main {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                align-items: center;
+                color: #464646;
+                
+            }
+            .letter-btns {
+                display: grid;
+                grid-template-columns: repeat(10,1fr);
+                gap: .5rem;
+            }
+
+            @media screen and (max-width: 950px) {
+                .letter-btns {
+                    grid-template-columns: repeat(7,1fr);
+                }
+                
+            }
+            @media screen and (max-width: 740px) {
+                .letter-btns {
+                    grid-template-columns: repeat(4,1fr);
+                }
+                
+            }
+
+            @media screen and (max-width: 550px) {
+                .letter-btns {
+                    grid-template-columns: repeat(3,1fr);
+                }
+                
+            }
+
+            button {
+                border: 1px solid gray;
+                font-weight: bold;
+                font-size: 1.5em;
+                color:#464646;
+                border-radius: .5rem;
+            }
+            button:hover {
+                color: white;
+                background-color: #646cff;
+            }
+            button:disabled {
+                color: lightgray;
+                /* border: lightgray; */
+                cursor: auto;
+            }
+            button:hover:disabled {
+                color: #464646;
+                border: inherit;
+                background-color: white;
+            }
+
+            .score, .search-word {
+                font-size: 2rem;
+            
+            }
+
+            .search-word {
+                font-family: 'Courier New', Courier, monospace;
+                letter-spacing: .5em;
+                text-align: center;
+            }
+            
+            .letter-btns, button {
+                cursor: pointer;
+                padding: 0.5rem 2rem;
+            }
+
+            .looser {
+                font-size: 1.5rem;
+                color: tomato;
+                font-weight: bolder;
+                text-align: center;
+            }
+
+            </style>
+    </head>
+    <body>
+        <header>
+            <h1><a href="../../index.html">07 Hangman the Game</a></h1>
+        </header>
+        <main>
+            <div class="score">0 : 6</div>
+            <div class="looser winner"></div>
+            <div class="letter-btns">
+
+            </div>
+            <p class="search-word">Hi Babe, <br>Push the Button!</p>
+            <button class="hit-me-again">Start Me Baby First Time</button>
+        </main>
+
+        
+</html>

@@ -138,3 +138,11 @@ li.sun::before {
 li.sun::after {
   content: " 🌞";
 }
+
+li.teddy::before {
+  content: "🧸 ";
+}
+
+li.teddy::after {
+  content: " 🧸";
+}
