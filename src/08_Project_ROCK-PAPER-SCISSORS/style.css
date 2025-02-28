@@ -19,6 +19,7 @@ html{
 
 .rounds-box {
     border: 2px solid whitesmoke;
+    border-radius: 20px;
     width: 450px;
     margin: auto;
     display: flex;
@@ -55,6 +56,7 @@ html{
 
 .spielfeld {
     border: 2px solid whitesmoke;
+    border-radius: 20px;
     width: 450px;
     height: 130px;
     margin: auto;
@@ -110,6 +112,7 @@ html{
 
 .actions {
     border: 2px solid whitesmoke;
+    border-radius: 20px;
     width: 450px;
     margin: auto;
     display: flex;
@@ -124,6 +127,7 @@ html{
     font-weight: 00;
     margin-bottom: 20px;
     text-align: center;
+    height: 100px;
 }
 
 .actions .play-icons {

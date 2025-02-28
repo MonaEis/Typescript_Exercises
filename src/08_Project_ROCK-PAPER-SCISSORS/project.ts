@@ -16,10 +16,12 @@ const inputRock = document.querySelector(".input-rock");
 const inputPaper = document.querySelector(".input-paper");
 const inputScissors = document.querySelector(".input-scissors");
 
-const playButtons = document.querySelector<HTMLDivElement>(".play-icons")
+const playButtons = document.querySelector<HTMLDivElement>(".play-icons");
+
+const background = document.querySelector<HTMLDivElement>(".wrapper");
 
 
-//* 1. Variablen fuer die Speilstraende und Rundezahl und computerChoice
+//* 1. Variablen fuer die Speilstaende und Rundezahl und computerChoice
 
 let playerPoints = 0;
 let computerPoints = 0;
@@ -128,26 +130,51 @@ function playGame(userChoice: string) {
             }
     }
 
-    //f. spielstand  ins html
+    //* f. spielstand  ins html
     if (outputCompScore && outputPlayerScore){
     outputPlayerScore.innerHTML = playerPoints.toString();
     outputCompScore.innerHTML = computerPoints.toString();
     }
 
-    //g. wann ist das spiel zuende? 
+    // * ausgabe für die Runden - in schriftlicher Form
+    if(userChoice === "✊" && computerChoice === "✊"){
+        if(gameOutput) gameOutput.innerHTML = "It was a draw! You both chose Rock"
+    } else if(userChoice === "✌️" && computerChoice === "✌️"){
+        if(gameOutput) gameOutput.innerHTML = "It was a draw! You both chose Scissor"
+    } else if (userChoice === "🤚" && computerChoice === "🤚"){
+        if(gameOutput) gameOutput.innerHTML = "It was a draw! You both chose Paper"
+    } else if (userChoice === "✊" && computerChoice === "🤚"){
+        if(gameOutput) gameOutput.innerHTML = "Paper beats Rock. You lose!"
+    } else if (userChoice === "✊" && computerChoice === "✌️"){
+        if(gameOutput) gameOutput.innerHTML = "Rock beats Scissors. You win!"
+    } else if (userChoice === "🤚" && computerChoice === "✊"){
+        if(gameOutput) gameOutput.innerHTML = "Paper beats Rock. You win!"
+    } else if (userChoice === "🤚" && computerChoice === "✌️"){
+        if(gameOutput) gameOutput.innerHTML = "Scissors beats Paper. You lose!"
+    } else if (userChoice === "✌️" && computerChoice === "✊"){
+        if(gameOutput) gameOutput.innerHTML = "Rock beats Scissors. You lose!"
+    } else if (userChoice === "✌️" && computerChoice === "🤚"){
+        if(gameOutput) gameOutput.innerHTML = "Scissors beats Paper. You win!"
+    }
+    
+
+    //* g. wann ist das spiel zuende? 
     if(Number(currentRound) === Number(totalRound)) {
         //* ein html output wer hat gewonnen o. unentscieden 
         if(playerPoints > computerPoints){
-            if(gameOutput){
-                 gameOutput.innerHTML = "👉 You won !!! 👈"
+            if(gameOutput && background){
+                 gameOutput.innerHTML = "👉 You won !!! 👈";
+                 background.style.backgroundColor = "rgb(49, 171, 116)";
             }
         } else if(playerPoints === computerPoints){
-            if(gameOutput){
-                gameOutput.innerHTML = "🫣 It's a draw 🫣"
+            if(gameOutput && background){
+                gameOutput.innerHTML = "🫣 It's a draw 🫣";
+                background.style.backgroundColor = "rgb(17, 49, 147)";
            }
         } else {
-            if(gameOutput){
-                gameOutput.innerHTML = "Loser. 🥺 Try again!"
+            if(gameOutput && background){
+                gameOutput.innerHTML = "Loser. 🥺 Try again!";
+                background.style.backgroundColor = "rgb(171, 68, 49)";
            }
         }
 
@@ -155,12 +182,13 @@ function playGame(userChoice: string) {
         if (playButtons) {
             playButtons.style.pointerEvents = "none"; 
             playButtons.style.opacity = "0.4"; 
-        }
+        }      
+
     }
 
-}
+};
 
-//5. reset FN 
+//*5. reset FN 
 // eventlistener
 // alles auf null setzen
 // variablen + html
@@ -197,9 +225,11 @@ function restartGame(){
    }
 
    if(outputRoundCounter){
-    outputRoundCounter.style.visibility= "hidden";
-}
+        outputRoundCounter.style.visibility= "hidden";
+    }
+    if(background){
+        background.style.backgroundColor = ""
+    }
     
 }
-
 
