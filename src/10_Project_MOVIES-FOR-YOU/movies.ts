@@ -1019,8 +1019,8 @@ const moviesFormatted: MovieItems[] = movies.map(movie => ({
     rating: movie[5],
 }));
 
-console.log(movies);
-console.log(moviesFormatted);
+console.log("movies:", movies);
+console.log("moviesFormatiert", moviesFormatted);
 
 const movieContainer = document.querySelector(".products");
 const sortYearUp = document.querySelector(".year-up");
@@ -1034,8 +1034,8 @@ const error = document.querySelector(".error");
 
 
 
-function renderMovies(singleMovies: MovieItems[]){
-    if(movieContainer) movieContainer.innerHTML = "";
+function renderMovies(singleMovies: MovieItems[]) {
+    if (movieContainer) movieContainer.innerHTML = "";
 
     // * Div erstellen
     singleMovies.forEach((singleMovieItem) => {
@@ -1056,15 +1056,15 @@ function renderMovies(singleMovies: MovieItems[]){
         const movieLength = document.createElement("p");
         movieLength.innerText = singleMovieItem.movieLength;
 
-        const genre = document.createElement("div"); 
-       // genre.innerHTML = singleMovieItem.movieGenre.toString() 
-       singleMovieItem.movieGenre.forEach((element) => genre.innerHTML += `<p>${element}`);
-        
+        const genre = document.createElement("div");
+        // genre.innerHTML = singleMovieItem.movieGenre.toString() 
+        singleMovieItem.movieGenre.forEach((element) => genre.innerHTML += `<p>${element}`);
+
         const rating = document.createElement("p");
         rating.innerHTML = singleMovieItem.rating;
 
         movieCard.append(movieTitle, year, director, movieLength, genre, rating);
-        if(movieContainer){
+        if (movieContainer) {
             movieContainer.appendChild(movieCard)
         }
     })
@@ -1078,27 +1078,27 @@ searchButton?.addEventListener("click", () => filterMovieName(userSearchInput ? 
 
 function filterMovieName(searchInput: string) {
     // * error löschen
-    if(error) {
+    if (error) {
         error.innerHTML = "";
     }
 
     let filteredMovieNames = [...moviesFormatted];
-    filteredMovieNames = filteredMovieNames.filter((nameItem) => 
+    filteredMovieNames = filteredMovieNames.filter((nameItem) =>
         nameItem.movieName.toLowerCase().includes(searchInput.toLowerCase()) ||
         nameItem.year.includes(searchInput) ||
-        nameItem.director.toLowerCase().includes(searchInput.toLowerCase())    
+        nameItem.director.toLowerCase().includes(searchInput.toLowerCase())
     );
     // * Film not found!!
-//    if (searchInput !== filteredMovieNames.includes(searchInput).toString()){
-   if (filteredMovieNames.length === 0){
+    //    if (searchInput !== filteredMovieNames.includes(searchInput).toString()){
+    if (filteredMovieNames.length === 0) {
         let errorOutput = document.createElement("p");
         errorOutput.innerText = `Film not Found`
         error?.appendChild(errorOutput);
         // * wieder Input löschen
-        if(userSearchInput){
-            userSearchInput.value= ""
+        if (userSearchInput) {
+            userSearchInput.value = ""
         }
-   } 
+    }
     renderMovies(filteredMovieNames);
 }
 
@@ -1110,8 +1110,8 @@ sortBestRate?.addEventListener("click", sortedRateDown);
 
 // * Year Up
 function sortedYearUp() {
-     // * error löschen
-     if(error) {
+    // * error löschen
+    if (error) {
         error.innerHTML = "";
     }
 
@@ -1121,8 +1121,8 @@ function sortedYearUp() {
     console.log(sortedYear);
 
     // * Begriff aus Suchfeld löschen
-    if (userSearchInput){
-        userSearchInput.value =""
+    if (userSearchInput) {
+        userSearchInput.value = ""
     }
 
     renderMovies(sortedYear)
@@ -1130,19 +1130,19 @@ function sortedYearUp() {
 
 // * Year Down
 function sortedYearDown() {
-      // * error löschen
-      if(error) {
+    // * error löschen
+    if (error) {
         error.innerHTML = "";
     }
-    
+
     console.log("ich wurde geklickt");
     const sortedYear = [...moviesFormatted];
     sortedYear.sort((a, b) => Number(b.year) - Number(a.year));
     console.log(sortedYear);
 
     // * Begriff aus Suchfeld löschen
-    if (userSearchInput){
-        userSearchInput.value =""
+    if (userSearchInput) {
+        userSearchInput.value = ""
     }
 
     renderMovies(sortedYear)
@@ -1151,8 +1151,8 @@ function sortedYearDown() {
 // * Best Rate
 function sortedRateDown() {
     // * error löschen
-    if(error) {
-        error.innerHTML = ""; 
+    if (error) {
+        error.innerHTML = "";
     }
 
     console.log("ich wurde geklickt");
@@ -1161,9 +1161,64 @@ function sortedRateDown() {
     console.log(sortedRate);
 
     // * Begriff aus Suchfeld löschen
-    if (userSearchInput){
-        userSearchInput.value =""
+    if (userSearchInput) {
+        userSearchInput.value = ""
     }
 
     renderMovies(sortedRate)
+}
+
+
+
+// * Genre Filtern
+// * Buttons erstellen
+const genresInputBtns = document.querySelector(".genres");
+
+const allGenres = moviesFormatted.map(movie => movie.movieGenre)
+console.log(allGenres);
+
+const splitGenres: string[] = [];
+
+moviesFormatted.forEach(movie => {
+    splitGenres.push(...movie.movieGenre);
+});
+
+console.log(splitGenres);
+
+const uniqueGenres = splitGenres.filter((a, b) => splitGenres.indexOf(a) === b);
+console.log(uniqueGenres);
+
+const sortedGenres = uniqueGenres.sort((a, b) => a.localeCompare(b));
+console.log(sortedGenres);
+
+for (const genreButton of sortedGenres) {
+    // console.log(genreButton);
+    if (genresInputBtns) {
+        genresInputBtns.innerHTML += `<button class="genre-btn">${genreButton}</button>`
+    }
+}
+const allGenreButtons = document.querySelectorAll(".genre-btn");
+// console.log(allGenreButtons);
+
+allGenreButtons.forEach((button) => {
+    button.addEventListener("click", selectGenre);
+});
+
+// * FN für Genre Button sortieren
+function selectGenre(this: HTMLElement) {
+    // * error löschen
+    if (error) {
+        error.innerHTML = "";
+    }
+
+    // console.log("ich wurde geklickt");
+    const selectedGenre = this.textContent;
+    console.log("ausgewähltes Genre:", selectedGenre);
+
+    let sortedGenres = [...moviesFormatted];
+
+    sortedGenres = sortedGenres.filter((singleGenre) => singleGenre.movieGenre.includes(selectedGenre)); //+ hier ist noch ein Fehler 
+    console.log(selectedGenre);
+
+    renderMovies(sortedGenres);
 }

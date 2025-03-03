@@ -108,6 +108,30 @@ header h5 {
     
 }
 
+.genres {
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 4rem;
+}
+
+.genre-btn {
+    font-size: 1rem;
+    text-transform: uppercase;
+    height: 2rem;
+    width: 100px;
+    border: none;
+    border-radius: 15px;
+    background-color: #ff6347;
+    color: whitesmoke;
+    letter-spacing:.3rem;
+    font-family: var(--ff-med);
+    
+}
+
+
 .error p {
     font-family: var(--ff-b);
     color: #ff6347;
