@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: cornflowerblue;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 6rem 4rem;
+
+}
+
+h1 {
+    color: white;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+h2 {
+    color: rgb(68, 68, 68);
+    margin-bottom: 5rem;
+    font-size: 4rem;
+}
+
+h3 {
+    color: white;
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+    background-color: aquamarine;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+}
+
+.input p{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+

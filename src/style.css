@@ -146,3 +146,11 @@ li.teddy::before {
 li.teddy::after {
   content: " 🧸";
 }
+
+li.unicorn::before {
+  content: "🦄 ";
+}
+
+li.unicorn::after {
+  content: " 🦄";
+}
