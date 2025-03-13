@@ -1,171 +1,167 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  transition: 0.3s linear;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s linear;
 }
 
 html {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: aquamarine;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    background-color: aquamarine;
 }
 
-
-div{
-  width: 100%;
-  padding: 5% 5% 1% 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+div {
+    width: 100%;
+    padding: 5% 5% 1% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
-  font-size: 60px;
-  color: #7f7fff;
-  margin-bottom: 20px;
-  text-align: center;
+    font-size: 60px;
+    color: #7f7fff;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 h2 {
-  font-size: 35px;
-  color: rgb(240, 96, 250);
-  margin-bottom: 40px;
-  border-bottom: dotted 8px;
-  text-align: center;
+    font-size: 35px;
+    color: rgb(240, 96, 250);
+    margin-bottom: 40px;
+    border-bottom: dotted 8px;
+    text-align: center;
 }
 
 span {
-  color: tomato;
-  font-weight: bold;
+    color: tomato;
+    font-weight: bold;
 }
 
 li {
-  font-size: 30px;
-  margin-bottom: 15px;
-  text-align: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  
-  
+    font-size: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 li.dino::before {
-  content: "🦖 ";
-  
+    content: "🦖 ";
 }
 
 li.dino::after {
-  content: " 🦖";
+    content: " 🦖";
 }
 
 ul li:hover::before {
-  content: "👉 ";
+    content: "👉 ";
 }
 
 ul li:hover::after {
-  content: " 👈";
+    content: " 👈";
 }
 
 li:hover {
-  color: coral;
-  font-size: 35px;
+    color: coral;
+    font-size: 35px;
 }
 
-a{
-  text-decoration: none;
-  color: rgb(127, 127, 255);
+a {
+    text-decoration: none;
+    color: rgb(127, 127, 255);
 }
 
-a:hover{
-  color: coral;
+a:hover {
+    color: coral;
 }
 
 li.bird::before {
-  content: "🦜 ";
+    content: "🦜 ";
 }
 
 li.bird::after {
-  content: " 🦜";
+    content: " 🦜";
 }
 
 li.bl-beere::before {
-  content: "🫐 ";
+    content: "🫐 ";
 }
 
 li.bl-beere::after {
-  content: " 🫐";
+    content: " 🫐";
 }
 
 li.cam::before {
-  content: "📸 ";
+    content: "📸 ";
 }
 
 li.cam::after {
-  content: " 📸";
+    content: " 📸";
 }
 
 li.fox::before {
-  content: "🦊 ";
+    content: "🦊 ";
 }
 
 li.fox::after {
-  content: " 🦊";
+    content: " 🦊";
 }
 
 li.ghost::before {
-  content: "👻 ";
+    content: "👻 ";
 }
 
 li.ghost::after {
-  content: " 👻";
+    content: " 👻";
 }
 
 li.dodo::before {
-  content: "🦤 ";
+    content: "🦤 ";
 }
 
 li.dodo::after {
-  content: " 🦤";
+    content: " 🦤";
 }
 
 li.pistol::before {
-  content: "🔫 ";
+    content: "🔫 ";
 }
 
 li.pistol::after {
-  content: " 🔫";
+    content: " 🔫";
 }
 
 li.sun::before {
-  content: "🌞 ";
+    content: "🌞 ";
 }
 
 li.sun::after {
-  content: " 🌞";
+    content: " 🌞";
 }
 
 li.teddy::before {
-  content: "🧸 ";
+    content: "🧸 ";
 }
 
 li.teddy::after {
-  content: " 🧸";
+    content: " 🧸";
 }
 
 li.unicorn::before {
-  content: "🦄 ";
+    content: "🦄 ";
 }
 
 li.unicorn::after {
-  content: " 🦄";
+    content: " 🦄";
 }
 
 li.robi::before {
-  content: "🤖 ";
+    content: "🤖 ";
 }
 
 li.robi::after {
-  content: " 🤖";
+    content: " 🤖";
 }
