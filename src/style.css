@@ -165,3 +165,11 @@ li.robi::before {
 li.robi::after {
     content: " 🤖";
 }
+
+li.jong::before {
+    content: "🤹🏻‍♀️ ";
+}
+
+li.jong::after {
+    content: " 🤹🏻‍♀️";
+}
